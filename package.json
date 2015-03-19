@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "name": "uix_todomvc",
+  "version": "0.0.1",
+  "description": "TodoMVC - uix",
+  "license": "BSD",
+  "homepage": "https://github.com/localvoid/uix_todomvc/",
+  "repository": "https://github.com/localvoid/uix_todomvc/",
+  "author": {
+    "name": "Boris Kaul",
+    "email": "localvoid@gmail.com",
+    "url": "https://github.com/localvoid"
+  },
+  "keywords": [
+    "virtual",
+    "dom",
+    "virtualdom",
+    "vdom",
+    "diff",
+    "browser",
+    "uix",
+    "TodoMVC"
+  ],
+  "dependencies": {
+    "todomvc-app-css": "^1.0.1",
+    "todomvc-common": "^1.0.1"
+  },
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.10",
+    "gulp-gh-pages": "^0.4.0"
+  }
+}
