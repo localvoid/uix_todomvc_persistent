@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-22T09:26:05.500Z
+// 2015-03-22T11:16:50.897Z
 
 part of uix_todomvc_persistent.src.ui.component.entry;
 
@@ -8,8 +8,10 @@ part of uix_todomvc_persistent.src.ui.component.entry;
 // Target: class Entry
 // **************************************************************************
 
-Entry createEntry([PMap data]) {
-  final r = new Entry()..data = data;
+Entry createEntry([PMap data, Component parent]) {
+  final r = new Entry()
+    ..parent = parent
+    ..data = data;
   r.init();
   return r;
 }

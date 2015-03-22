@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-22T09:26:05.531Z
+// 2015-03-22T11:16:51.014Z
 
 part of uix_todomvc_persistent.src.ui.component.footer;
 
@@ -24,8 +24,10 @@ abstract class _FooterPropsShallowEqOperator {
 // Target: class Footer
 // **************************************************************************
 
-Footer createFooter([FooterProps data]) {
-  final r = new Footer()..data = data;
+Footer createFooter([FooterProps data, Component parent]) {
+  final r = new Footer()
+    ..parent = parent
+    ..data = data;
   r.init();
   return r;
 }

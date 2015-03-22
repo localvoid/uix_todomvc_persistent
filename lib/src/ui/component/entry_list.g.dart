@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-22T09:26:05.535Z
+// 2015-03-22T11:16:51.030Z
 
 part of uix_todomvc_persistent.src.ui.component.entry_list;
 
@@ -8,8 +8,10 @@ part of uix_todomvc_persistent.src.ui.component.entry_list;
 // Target: class EntryList
 // **************************************************************************
 
-EntryList createEntryList([List data]) {
-  final r = new EntryList()..data = data;
+EntryList createEntryList([List data, Component parent]) {
+  final r = new EntryList()
+    ..parent = parent
+    ..data = data;
   r.init();
   return r;
 }

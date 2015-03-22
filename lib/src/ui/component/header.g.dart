@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-22T09:26:05.523Z
+// 2015-03-22T11:16:50.994Z
 
 part of uix_todomvc_persistent.src.ui.component.header;
 
@@ -8,8 +8,10 @@ part of uix_todomvc_persistent.src.ui.component.header;
 // Target: class Header
 // **************************************************************************
 
-Header createHeader([dynamic data]) {
-  final r = new Header()..data = data;
+Header createHeader([dynamic data, Component parent]) {
+  final r = new Header()
+    ..parent = parent
+    ..data = data;
   r.init();
   return r;
 }

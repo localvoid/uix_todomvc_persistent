@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-22T09:26:05.485Z
+// 2015-03-22T11:16:50.992Z
 
 part of uix_todomvc_persistent.src.ui.component.main;
 
@@ -21,8 +21,10 @@ abstract class _MainPropsShallowEqOperator {
 // Target: class Main
 // **************************************************************************
 
-Main createMain([MainProps data]) {
-  final r = new Main()..data = data;
+Main createMain([MainProps data, Component parent]) {
+  final r = new Main()
+    ..parent = parent
+    ..data = data;
   r.init();
   return r;
 }

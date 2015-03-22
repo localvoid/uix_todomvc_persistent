@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-22T09:26:05.517Z
+// 2015-03-22T11:16:50.978Z
 
 part of uix_todomvc_persistent.src.ui.component.app;
 
@@ -8,8 +8,10 @@ part of uix_todomvc_persistent.src.ui.component.app;
 // Target: class App
 // **************************************************************************
 
-App createApp([dynamic data]) {
-  final r = new App()..data = data;
+App createApp([dynamic data, Component parent]) {
+  final r = new App()
+    ..parent = parent
+    ..data = data;
   r.init();
   return r;
 }
