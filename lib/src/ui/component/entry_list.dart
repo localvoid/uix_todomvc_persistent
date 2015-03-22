@@ -10,7 +10,9 @@ part 'entry_list.g.dart';
 class EntryList extends Component<List<PMap>> {
   String get tag => 'ul';
 
-  build() => vRoot(attrs: const {'id': 'todo-list'})(
-      data.map((e) => vEntry(key: e.get('id'), data: e))
-    );
+  updateView() {
+    updateRoot(vRoot(attrs: const {'id': 'todo-list'})(
+        data.map((e) => vEntry(key: e.get('id'), data: e))
+    ));
+  }
 }

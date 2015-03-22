@@ -35,7 +35,8 @@ class Header extends Component {
     _input = (e.target as html.InputElement).value;
   }
 
-  build() => vRoot()([
+  updateView() {
+    updateRoot(vRoot()([
       vElement('h1')('todos'),
       vTextInput(
           data: _input,
@@ -45,5 +46,6 @@ class Header extends Component {
             'placeholder': 'What needs to be done',
             'autofocus': 'true'
           })
-    ]);
+    ]));
+  }
 }

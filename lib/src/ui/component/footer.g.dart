@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-19T07:37:59.728Z
+// 2015-03-22T09:26:05.531Z
 
 part of uix_todomvc_persistent.src.ui.component.footer;
 
@@ -26,6 +26,7 @@ abstract class _FooterPropsShallowEqOperator {
 
 Footer createFooter([FooterProps data]) {
   final r = new Footer()..data = data;
+  r.init();
   return r;
 }
 VNode vFooter({FooterProps data, Object key, String type,

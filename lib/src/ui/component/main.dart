@@ -28,10 +28,10 @@ class Main extends Component<MainProps> {
     entryStore.toggleAll(!(data.activeCount == 0));
   }
 
-  build() {
-    return vRoot(attrs: const {'id': 'main'})([
+  updateView() {
+    updateRoot(vRoot(attrs: const {'id': 'main'})([
       vCheckedInput(data: (data.activeCount == 0), attrs: {'type': 'checkbox', 'id': 'toggle-all'}),
       vEntryList(data: data.shownTodos)
-    ]);
+    ]));
   }
 }

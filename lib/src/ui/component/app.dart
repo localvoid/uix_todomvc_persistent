@@ -18,7 +18,7 @@ class App extends Component {
     addSubscription(showStore.onChange.listen(invalidate));
   }
 
-  build() {
+  updateView() {
     final show = showStore.value;
     final shownTodos = entryStore.entries.values.where((e) {
       switch (show) {
@@ -53,6 +53,6 @@ class App extends Component {
               show: show)));
     }
 
-    return vRoot(attrs: const {'id': 'main'})(children);
+    updateRoot(vRoot(attrs: const {'id': 'main'})(children));
   }
 }

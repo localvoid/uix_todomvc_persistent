@@ -77,7 +77,7 @@ class Entry extends Component<PMap> {
     }
   }
 
-  build() {
+  updateView() {
     final bool completed = data.get('completed');
 
     final view = vElement('div', type: 'view')([
@@ -98,6 +98,6 @@ class Entry extends Component<PMap> {
     if (_editing) classes.add('editing');
     if (completed) classes.add('completed');
 
-    return vRoot(classes: classes)(children);
+    updateRoot(vRoot(classes: classes)(children));
   }
 }

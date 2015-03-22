@@ -27,7 +27,7 @@ class Footer extends Component<FooterProps> {
     });
   }
 
-  build() {
+  updateView() {
     const selected = const ['selected'];
     final showEntries = data.show;
 
@@ -57,6 +57,6 @@ class Footer extends Component<FooterProps> {
       );
     }
 
-    return vRoot(attrs: const {'id': 'footer'})(children);
+    updateRoot(vRoot(attrs: const {'id': 'footer'})(children));
   }
 }

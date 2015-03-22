@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-19T07:05:37.692Z
+// 2015-03-22T09:26:05.517Z
 
 part of uix_todomvc_persistent.src.ui.component.app;
 
@@ -10,6 +10,7 @@ part of uix_todomvc_persistent.src.ui.component.app;
 
 App createApp([dynamic data]) {
   final r = new App()..data = data;
+  r.init();
   return r;
 }
 VNode vApp({dynamic data, Object key, String type, Map<String, String> attrs,
