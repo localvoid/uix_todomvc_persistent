@@ -54,7 +54,7 @@ class Entry extends Component<PMap> {
 
   void _startEdit(_) {
     _editing = true;
-    _editingTitle = data.get('title').title;
+    _editingTitle = data.get('title');
     invalidate();
   }
 
