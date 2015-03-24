@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-22T11:16:50.994Z
+// 2015-03-24T08:24:49.025Z
 
 part of uix_todomvc_persistent.src.ui.component.header;
 
@@ -9,11 +9,10 @@ part of uix_todomvc_persistent.src.ui.component.header;
 // **************************************************************************
 
 Header createHeader([dynamic data, Component parent]) {
-  final r = new Header()
+  return new Header()
     ..parent = parent
-    ..data = data;
-  r.init();
-  return r;
+    ..data = data
+    ..init();
 }
 VNode vHeader({dynamic data, Object key, String type, Map<String, String> attrs,
     Map<String, String> style, List<String> classes,

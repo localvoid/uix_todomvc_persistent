@@ -8,7 +8,7 @@ import '../../env.dart';
 
 part 'entry.g.dart';
 
-@ComponentMeta()
+@ComponentMeta(immutableData: true)
 class Entry extends Component<PMap> {
   String get tag => 'li';
 

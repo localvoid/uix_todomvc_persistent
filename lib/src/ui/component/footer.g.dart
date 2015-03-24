@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-22T11:16:51.014Z
+// 2015-03-24T08:24:49.047Z
 
 part of uix_todomvc_persistent.src.ui.component.footer;
 
@@ -12,7 +12,6 @@ abstract class _FooterPropsShallowEqOperator {
   int get activeCount;
   int get completedCount;
   ShowType get show;
-  const _FooterPropsShallowEqOperator();
   bool operator ==(FooterProps other) => (identical(this, other) ||
       ((activeCount == other.activeCount) &&
           (completedCount == other.completedCount) &&
@@ -25,11 +24,10 @@ abstract class _FooterPropsShallowEqOperator {
 // **************************************************************************
 
 Footer createFooter([FooterProps data, Component parent]) {
-  final r = new Footer()
+  return new Footer()
     ..parent = parent
-    ..data = data;
-  r.init();
-  return r;
+    ..data = data
+    ..init();
 }
 VNode vFooter({FooterProps data, Object key, String type,
     Map<String, String> attrs, Map<String, String> style, List<String> classes,

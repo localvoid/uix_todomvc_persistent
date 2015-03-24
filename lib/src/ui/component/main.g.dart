@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-22T11:16:50.992Z
+// 2015-03-24T08:24:48.923Z
 
 part of uix_todomvc_persistent.src.ui.component.main;
 
@@ -11,9 +11,10 @@ part of uix_todomvc_persistent.src.ui.component.main;
 abstract class _MainPropsShallowEqOperator {
   List get shownTodos;
   int get activeCount;
-  const _MainPropsShallowEqOperator();
   bool operator ==(MainProps other) => (identical(this, other) ||
-      ((shownTodos == other.shownTodos) && (activeCount == other.activeCount)));
+      ((super == other) &&
+          (shownTodos == other.shownTodos) &&
+          (activeCount == other.activeCount)));
 }
 
 // **************************************************************************
@@ -22,11 +23,10 @@ abstract class _MainPropsShallowEqOperator {
 // **************************************************************************
 
 Main createMain([MainProps data, Component parent]) {
-  final r = new Main()
+  return new Main()
     ..parent = parent
-    ..data = data;
-  r.init();
-  return r;
+    ..data = data
+    ..init();
 }
 VNode vMain({MainProps data, Object key, String type, Map<String, String> attrs,
     Map<String, String> style, List<String> classes,
