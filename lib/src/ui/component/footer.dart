@@ -8,7 +8,7 @@ import '../../store.dart';
 part 'footer.g.dart';
 
 @ShallowEqOperator()
-class FooterProps {
+class FooterProps extends Object with _FooterPropsShallowEqOperator {
   final int activeCount;
   final int completedCount;
   final ShowType show;

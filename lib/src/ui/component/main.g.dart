@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-24T08:24:48.923Z
+// 2015-03-24T08:30:08.945Z
 
 part of uix_todomvc_persistent.src.ui.component.main;
 
@@ -12,9 +12,7 @@ abstract class _MainPropsShallowEqOperator {
   List get shownTodos;
   int get activeCount;
   bool operator ==(MainProps other) => (identical(this, other) ||
-      ((super == other) &&
-          (shownTodos == other.shownTodos) &&
-          (activeCount == other.activeCount)));
+      ((shownTodos == other.shownTodos) && (activeCount == other.activeCount)));
 }
 
 // **************************************************************************

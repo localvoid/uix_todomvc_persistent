@@ -9,7 +9,7 @@ import 'entry_list.dart';
 part 'main.g.dart';
 
 @ShallowEqOperator()
-class MainProps extends _MainPropsShallowEqOperator {
+class MainProps extends Object with _MainPropsShallowEqOperator {
   final List<PMap> shownTodos;
   final int activeCount;
 
