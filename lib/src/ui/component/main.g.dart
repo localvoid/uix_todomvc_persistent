@@ -1,35 +1,23 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-24T08:30:08.945Z
+// 2015-03-28T11:26:36.820Z
 
 part of uix_todomvc_persistent.src.ui.component.main;
-
-// **************************************************************************
-// Generator: UixGenerator
-// Target: class MainProps
-// **************************************************************************
-
-abstract class _MainPropsShallowEqOperator {
-  List get shownTodos;
-  int get activeCount;
-  bool operator ==(MainProps other) => (identical(this, other) ||
-      ((shownTodos == other.shownTodos) && (activeCount == other.activeCount)));
-}
 
 // **************************************************************************
 // Generator: UixGenerator
 // Target: class Main
 // **************************************************************************
 
-Main createMain([MainProps data, Component parent]) {
+Main createMain([MainProps data, List<VNode> children, Component parent]) {
   return new Main()
     ..parent = parent
     ..data = data
-    ..init();
+    ..children = children;
 }
 VNode vMain({MainProps data, Object key, String type, Map<String, String> attrs,
     Map<String, String> style, List<String> classes,
     List<VNode> children}) => new VNode.component(createMain,
-    flags: VNode.componentFlag | VNode.dirtyCheckFlag,
+    flags: VNode.componentFlag,
     key: key,
     data: data,
     type: type,

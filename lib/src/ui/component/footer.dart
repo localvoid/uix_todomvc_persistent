@@ -7,13 +7,17 @@ import '../../store.dart';
 
 part 'footer.g.dart';
 
-@ShallowEqOperator()
-class FooterProps extends Object with _FooterPropsShallowEqOperator {
+class FooterProps {
   final int activeCount;
   final int completedCount;
   final ShowType show;
 
   FooterProps({this.activeCount, this.completedCount, this.show});
+
+  bool operator==(FooterProps other) =>
+      (activeCount == other.activeCount
+      && completedCount == other.completedCount
+      && show == other.show);
 }
 
 @ComponentMeta()

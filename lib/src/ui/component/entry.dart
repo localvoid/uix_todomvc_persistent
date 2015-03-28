@@ -8,8 +8,15 @@ import '../../env.dart';
 
 part 'entry.g.dart';
 
-@ComponentMeta(immutableData: true)
+@ComponentMeta()
 class Entry extends Component<PMap> {
+  set data(PMap newData) {
+    if (!identical(data_, newData)) {
+      data_ = newData;
+      invalidate();
+    }
+  }
+
   String get tag => 'li';
 
   bool _editing = false;

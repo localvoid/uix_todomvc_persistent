@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// 2015-03-24T08:25:29.547Z
+// 2015-03-28T11:26:37.030Z
 
 part of uix_todomvc_persistent.src.ui.component.entry_list;
 
@@ -8,11 +8,11 @@ part of uix_todomvc_persistent.src.ui.component.entry_list;
 // Target: class EntryList
 // **************************************************************************
 
-EntryList createEntryList([List data, Component parent]) {
+EntryList createEntryList([List data, List<VNode> children, Component parent]) {
   return new EntryList()
     ..parent = parent
     ..data = data
-    ..init();
+    ..children = children;
 }
 VNode vEntryList({List data, Object key, String type, Map<String, String> attrs,
     Map<String, String> style, List<String> classes,

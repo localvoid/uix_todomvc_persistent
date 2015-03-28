@@ -6,7 +6,7 @@ import 'entry.dart';
 
 part 'entry_list.g.dart';
 
-@ComponentMeta(dirtyCheck: false)
+@ComponentMeta()
 class EntryList extends Component<List<PMap>> {
   String get tag => 'ul';
 
