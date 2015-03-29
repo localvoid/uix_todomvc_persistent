@@ -5,18 +5,12 @@ import 'package:vacuum_persistent/persistent.dart';
 import 'package:uix/uix.dart';
 import 'package:uix/forms.dart';
 import '../../env.dart';
+import '../immutable_data_mixin.dart';
 
 part 'entry.g.dart';
 
 @ComponentMeta()
-class Entry extends Component<PMap> {
-  set data(PMap newData) {
-    if (!identical(data_, newData)) {
-      data_ = newData;
-      invalidate();
-    }
-  }
-
+class Entry extends Component<PMap> with ImmutableDataMixin<PMap> {
   String get tag => 'li';
 
   bool _editing = false;
@@ -63,6 +57,9 @@ class Entry extends Component<PMap> {
     _editing = true;
     _editingTitle = data.get('title');
     invalidate();
+    scheduler.nextFrame.after().then((_) {
+      (_input.ref as html.TextInputElement).focus();
+    });
   }
 
   void _destroy(_) {
