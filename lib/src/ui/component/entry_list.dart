@@ -12,7 +12,7 @@ class EntryList extends Component<List<PMap>> {
 
   updateView() {
     updateRoot(vRoot(attrs: const {'id': 'todo-list'})(
-        data.map((e) => vEntry(key: e.get('id'), data: e))
+        data.map((e) => vComponent($Entry, key: e.get('id'), data: e))
     ));
   }
 }

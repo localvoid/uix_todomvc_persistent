@@ -35,7 +35,6 @@ class Footer extends Component<FooterProps> {
     const selected = const ['selected'];
     final showEntries = data.show;
 
-    print(showEntries);
     final filters = vElement('ul', attrs: const {'id': 'filters'})([
         vElement('li')(
           vElement('a', attrs: const {'href': '#/'},

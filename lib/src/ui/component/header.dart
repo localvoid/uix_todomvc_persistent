@@ -38,7 +38,7 @@ class Header extends Component {
   updateView() {
     updateRoot(vRoot()([
       vElement('h1')('todos'),
-      vTextInput(
+      vComponent($TextInput,
           data: _input,
           attrs: const {
             'id': 'new-todo',

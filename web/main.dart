@@ -28,6 +28,6 @@ main() {
   initRouter();
 
   scheduler.nextFrame.write().then((_) {
-    injectComponent(ui.createApp(), html.querySelector('#todoapp'));
+    injectComponent(new ui.App(), html.querySelector('#todoapp'));
   });
 }

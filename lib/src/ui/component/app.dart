@@ -37,16 +37,16 @@ class App extends Component {
 
     final completedCount = entryStore.entries.length - activeCount;
 
-    final children = [vHeader(key: #header)];
+    final children = [vComponent($Header, key: #header)];
 
     if (shownTodos.isNotEmpty) {
-      children.add(vMain(key: #main,
+      children.add(vComponent($Main, key: #main,
                          data: new MainProps(
                              shownTodos: shownTodos,
                              activeCount: activeCount)));
     }
     if (activeCount > 0 || completedCount > 0) {
-      children.add(vFooter(key: #footer,
+      children.add(vComponent($Footer, key: #footer,
           data: new FooterProps(
               activeCount: activeCount,
               completedCount: completedCount,

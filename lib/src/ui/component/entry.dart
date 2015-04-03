@@ -85,14 +85,14 @@ class Entry extends Component<PMap> with ImmutableDataMixin<PMap> {
     final bool completed = data.get('completed');
 
     final view = vElement('div', type: 'view')([
-      vCheckedInput(type: 'toggle', data: completed, attrs: const {'type': 'checkbox'}),
+      vComponent($CheckedInput, type: 'toggle', data: completed, attrs: const {'type': 'checkbox'}),
       vElement('label')(data.get('title')),
       vElement('button', type: 'destroy')
     ]);
 
     final children = [view];
     if (_editing) {
-      _input = vTextInput(type: 'edit', data: _editingTitle, attrs: const {'type': 'text'});
+      _input = vComponent($TextInput, type: 'edit', data: _editingTitle, attrs: const {'type': 'text'});
       children.add(_input);
     } else {
       _input = null;
