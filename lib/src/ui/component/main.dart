@@ -6,9 +6,6 @@ import 'package:uix/forms.dart';
 import '../../env.dart';
 import 'entry_list.dart';
 
-part 'main.g.dart';
-
-
 class MainProps {
   final List<PMap> shownTodos;
   final int activeCount;
@@ -16,7 +13,7 @@ class MainProps {
   MainProps({this.shownTodos, this.activeCount});
 }
 
-@ComponentMeta()
+$Main() => new Main();
 class Main extends Component<MainProps> {
   String get tag => 'section';
 

@@ -7,9 +7,6 @@ import 'header.dart';
 import 'main.dart';
 import 'footer.dart';
 
-part 'app.g.dart';
-
-@ComponentMeta()
 class App extends Component {
   String get tag => 'section';
 

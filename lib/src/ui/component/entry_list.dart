@@ -4,9 +4,7 @@ import 'package:vacuum_persistent/persistent.dart';
 import 'package:uix/uix.dart';
 import 'entry.dart';
 
-part 'entry_list.g.dart';
-
-@ComponentMeta()
+$EntryList() => new EntryList();
 class EntryList extends Component<List<PMap>> {
   String get tag => 'ul';
 

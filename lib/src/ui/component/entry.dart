@@ -7,9 +7,7 @@ import 'package:uix/forms.dart';
 import '../../env.dart';
 import '../immutable_data_mixin.dart';
 
-part 'entry.g.dart';
-
-@ComponentMeta()
+$Entry() => new Entry();
 class Entry extends Component<PMap> with ImmutableDataMixin<PMap> {
   String get tag => 'li';
 

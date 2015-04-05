@@ -5,8 +5,6 @@ import '../../env.dart';
 import '../../utils.dart';
 import '../../store.dart';
 
-part 'footer.g.dart';
-
 class FooterProps {
   final int activeCount;
   final int completedCount;
@@ -20,7 +18,7 @@ class FooterProps {
       && show == other.show);
 }
 
-@ComponentMeta()
+$Footer() => new Footer();
 class Footer extends Component<FooterProps> {
   String get tag => 'footer';
 

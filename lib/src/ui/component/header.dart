@@ -5,9 +5,7 @@ import 'package:uix/uix.dart';
 import 'package:uix/forms.dart';
 import '../../env.dart';
 
-part 'header.g.dart';
-
-@ComponentMeta()
+$Header() => new Header();
 class Header extends Component {
   String get tag => 'header';
   String _input = '';
