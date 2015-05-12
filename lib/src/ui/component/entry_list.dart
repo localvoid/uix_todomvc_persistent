@@ -6,10 +6,10 @@ import 'entry.dart';
 
 $EntryList() => new EntryList();
 class EntryList extends Component<List<PMap>> {
-  String get tag => 'ul';
+  final String tag = 'ul';
 
   updateView() {
-    updateRoot(vRoot(attrs: const {'id': 'todo-list'})(
+    updateRoot(vRoot(attrs: const {Attr.id: 'todo-list'})(
         data.map((e) => vComponent($Entry, key: e.get('id'), data: e))
     ));
   }

@@ -2,12 +2,12 @@ library uix_todomvc_persistent.src.ui.component.header;
 
 import 'dart:html' as html;
 import 'package:uix/uix.dart';
-import 'package:uix/forms.dart';
+import 'package:uix_forms/uix_forms.dart';
 import '../../env.dart';
 
 $Header() => new Header();
 class Header extends Component {
-  String get tag => 'header';
+  final String tag = 'header';
   String _input = '';
 
   init() {
@@ -39,10 +39,10 @@ class Header extends Component {
       vComponent($TextInput,
           data: _input,
           attrs: const {
-            'id': 'new-todo',
-            'type': 'text',
-            'placeholder': 'What needs to be done',
-            'autofocus': 'true'
+            Attr.id: 'new-todo',
+            Attr.type: 'text',
+            Attr.placeholder: 'What needs to be done',
+            Attr.autofocus: true
           })
     ]));
   }

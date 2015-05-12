@@ -20,7 +20,7 @@ class FooterProps {
 
 $Footer() => new Footer();
 class Footer extends Component<FooterProps> {
-  String get tag => 'footer';
+  final String tag = 'footer';
 
   init() {
     element.onClick.matches('#clear-completed').listen((e) {
@@ -33,21 +33,21 @@ class Footer extends Component<FooterProps> {
     const selected = const ['selected'];
     final showEntries = data.show;
 
-    final filters = vElement('ul', attrs: const {'id': 'filters'})([
+    final filters = vElement('ul', attrs: const {Attr.id: 'filters'})([
         vElement('li')(
-          vElement('a', attrs: const {'href': '#/'},
+          vElement('a', attrs: const {Attr.href: '#/'},
              classes: showEntries == ShowType.all ? selected : null)('All')),
         vText(' '),
         vElement('li')(
-          vElement('a', attrs: const {'href': '#/active'},
+          vElement('a', attrs: const {Attr.href: '#/active'},
              classes: showEntries == ShowType.active ? selected : null)('Active')),
         vText(' '),
         vElement('li')(
-          vElement('a', attrs: const {'href': '#/completed'},
+          vElement('a', attrs: const {Attr.href: '#/completed'},
              classes: showEntries == ShowType.completed ? selected : null)('Completed'))
     ]);
 
-    final counter = vElement('span', attrs: const {'id': 'todo-count'})([
+    final counter = vElement('span', attrs: const {Attr.id: 'todo-count'})([
         vElement('strong')(data.activeCount.toString()),
         vText(' ${pluralize(data.activeCount, 'item')} left')
     ]);
@@ -55,10 +55,10 @@ class Footer extends Component<FooterProps> {
     final children = [counter, filters];
     if (data.completedCount > 0) {
       children.add(
-          vElement('button', attrs: const {'id': 'clear-completed'})('Clear completed (${data.completedCount})')
+          vElement('button', attrs: const {Attr.id: 'clear-completed'})('Clear completed (${data.completedCount})')
       );
     }
 
-    updateRoot(vRoot(attrs: const {'id': 'footer'})(children));
+    updateRoot(vRoot(attrs: const {Attr.id: 'footer'})(children));
   }
 }

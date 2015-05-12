@@ -2,7 +2,7 @@ library uix_todomvc_persistent.src.ui.component.main;
 
 import 'package:vacuum_persistent/persistent.dart';
 import 'package:uix/uix.dart';
-import 'package:uix/forms.dart';
+import 'package:uix_forms/uix_forms.dart';
 import '../../env.dart';
 import 'entry_list.dart';
 
@@ -15,7 +15,7 @@ class MainProps {
 
 $Main() => new Main();
 class Main extends Component<MainProps> {
-  String get tag => 'section';
+  final String tag = 'section';
 
   init() {
     element.onChange.matches('#toggle-all').listen(_toggleAll);
@@ -26,8 +26,8 @@ class Main extends Component<MainProps> {
   }
 
   updateView() {
-    updateRoot(vRoot(attrs: const {'id': 'main'})([
-      vComponent($CheckedInput, data: (data.activeCount == 0), attrs: {'type': 'checkbox', 'id': 'toggle-all'}),
+    updateRoot(vRoot(attrs: const {Attr.id: 'main'})([
+      vComponent($CheckedInput, data: (data.activeCount == 0), attrs: {Attr.type: 'checkbox', Attr.id: 'toggle-all'}),
       vComponent($EntryList, data: data.shownTodos)
     ]));
   }

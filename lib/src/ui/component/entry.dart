@@ -3,13 +3,13 @@ library uix_todomvc_persistent.src.ui.component.entry;
 import 'dart:html' as html;
 import 'package:vacuum_persistent/persistent.dart';
 import 'package:uix/uix.dart';
-import 'package:uix/forms.dart';
+import 'package:uix_forms/uix_forms.dart';
 import '../../env.dart';
 import '../immutable_data_mixin.dart';
 
 $Entry() => new Entry();
 class Entry extends Component<PMap> with ImmutableDataMixin<PMap> {
-  String get tag => 'li';
+  final String tag = 'li';
 
   bool _editing = false;
   String _editingTitle = null;
@@ -83,14 +83,14 @@ class Entry extends Component<PMap> with ImmutableDataMixin<PMap> {
     final bool completed = data.get('completed');
 
     final view = vElement('div', type: 'view')([
-      vComponent($CheckedInput, type: 'toggle', data: completed, attrs: const {'type': 'checkbox'}),
+      vComponent($CheckedInput, type: 'toggle', data: completed, attrs: const {Attr.type: 'checkbox'}),
       vElement('label')(data.get('title')),
       vElement('button', type: 'destroy')
     ]);
 
     final children = [view];
     if (_editing) {
-      _input = vComponent($TextInput, type: 'edit', data: _editingTitle, attrs: const {'type': 'text'});
+      _input = vComponent($TextInput, type: 'edit', data: _editingTitle, attrs: const {Attr.type: 'text'});
       children.add(_input);
     } else {
       _input = null;

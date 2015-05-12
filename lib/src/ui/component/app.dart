@@ -8,7 +8,7 @@ import 'main.dart';
 import 'footer.dart';
 
 class App extends Component {
-  String get tag => 'section';
+  final String tag = 'section';
 
   init() {
     addSubscription(entryStore.onChange.listen(invalidate));
@@ -50,6 +50,6 @@ class App extends Component {
               show: show)));
     }
 
-    updateRoot(vRoot(attrs: const {'id': 'main'})(children));
+    updateRoot(vRoot(attrs: const {Attr.id: 'main'})(children));
   }
 }
